@@ -16,6 +16,35 @@ CREATE TABLE fruta (
     FOREIGN KEY (categoriaID) REFERENCES categoria (categoriaID)
     );
 
+
+
+DROP TABLE producttb;
+CREATE TABLE producttb (
+    frutaID INT NOT NULL,
+    categoriaID INT NOT NULL,
+    product_name VARCHAR(20) NOT NULL,
+    product_price DECIMAL(5,2) NOT NULL,
+    product_image VARCHAR(20) NOT NULL,
+    stock INT NOT NULL,
+    PRIMARY KEY (frutaID),
+    FOREIGN KEY (categoriaID) REFERENCES categoria (categoriaID)
+    );
+
+
+
+
+DELETE FROM producttb;
+
+INSERT INTO producttb(frutaID,categoriaID,product_name, product_price, product_image,stock) VALUES 
+        (1,1,"Fresas", 3.50, "./assets/img/products/product-img-1.jpg",100),
+        (2,1,"Uva", 2.50, "./assets/img/products/product-img-2.jpg",100),
+        (3,1,"Limones",2, "./assets/img/products/product-img-3.jpg",100),
+        (4,1,"Kiwi", 2.70, "./assets/img/products/product-img-4.jpg",100),
+        (5,1,"Manzanas", 2.20, "./assets/img/products/product-img-5.jpg",100),
+        (6,1,"Frambuesas", 5.00, "./assets/img/products/product-img-6.jpg",100);
+
+
+
 CREATE TABLE cliente (
     clienteID INT NOT NULL,
     nombre VARCHAR(20) NOT NULL,
