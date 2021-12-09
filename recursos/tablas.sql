@@ -24,7 +24,7 @@ CREATE TABLE producttb (
     categoriaID INT NOT NULL,
     product_name VARCHAR(20) NOT NULL,
     product_price DECIMAL(5,2) NOT NULL,
-    product_image VARCHAR(20) NOT NULL,
+    product_image VARCHAR(100) NOT NULL,
     stock INT NOT NULL,
     PRIMARY KEY (frutaID),
     FOREIGN KEY (categoriaID) REFERENCES categoria (categoriaID)
