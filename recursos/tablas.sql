@@ -67,7 +67,6 @@ CREATE TABLE pedido (
     pedidoID INT NOT NULL,
     clienteID INT NOT NULL,
     metodoID INT NOT NULL,
-    precioTotal INT(20) NOT NULL,
     PRIMARY KEY (pedidoID),
     FOREIGN KEY (clienteID) REFERENCES cliente (clienteID),
     FOREIGN KEY (metodoID) REFERENCES metodoPago (metodoID)
@@ -116,10 +115,10 @@ INSERT INTO metodopago VALUES(3,"Bizum");
 
 
 DELETE FROM pedido;
-INSERT INTO pedido VALUES (1,1,1,"78");
-INSERT INTO pedido VALUES (2,2,1,"92");
-INSERT INTO pedido VALUES (3,3,1,"32");
-INSERT INTO pedido VALUES (4,2,2,"46");
+INSERT INTO pedido VALUES (1,1,1);
+INSERT INTO pedido VALUES (2,2,1);
+INSERT INTO pedido VALUES (3,3,1);
+INSERT INTO pedido VALUES (4,2,2);
 
 
 DELETE FROM lineapedido;
